@@ -1279,8 +1279,8 @@ wheels = [
 
 [[package]]
 name = "psxdata"
-version = "1.2.0"
-source = { registry = "https://pypi.org/simple" }
+version = "1.2.1"
+source = { url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.2.1.zip" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "diskcache" },
@@ -1293,10 +1293,34 @@ dependencies = [
     { name = "requests" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/fc/35/f0c12ad9843767a9eb5ed5866b08001adf4d3e1659fad34ac2742385afd5/psxdata-1.2.0.tar.gz", hash = "sha256:a4c9e7cfe36bb3b45dc36537f33269cb1bfd9c62ab657c1c735f6f47e86250c7", size = 36209, upload-time = "2026-09-30T15:20:17.498Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/58/c8/a773be87b2091578dcf2b8b4bff4d22ce16282b4c9f5f6e5e77753c2c177/psxdata-1.2.0-py3-none-any.whl", hash = "sha256:f48dcc94c68c9b4f665e96d58e8cba1159c34635a496260da77b6846367953fb", size = 42730, upload-time = "2026-09-30T15:20:16.25Z" },
+sdist = { hash = "sha256:49858d482e5fc5d322881bac56c69f0948203977cd04d60a73a7d79554552a49" }
+
+[package.metadata]
+requires-dist = [
+    { name = "beautifulsoup4", specifier = ">=4.11" },
+    { name = "diskcache", specifier = ">=5.4" },
+    { name = "httpx", specifier = ">=0.24" },
+    { name = "httpx", marker = "extra == 'dev'", specifier = ">=0.24" },
+    { name = "lxml", specifier = ">=4.9" },
+    { name = "mkdocs-material", marker = "extra == 'docs'", specifier = ">=9.5" },
+    { name = "mkdocstrings", extras = ["python"], marker = "extra == 'docs'", specifier = ">=0.25" },
+    { name = "mypy", marker = "extra == 'dev'", specifier = ">=1.0" },
+    { name = "pandas", specifier = ">=2.0" },
+    { name = "pyarrow", specifier = ">=14.0" },
+    { name = "pydantic", specifier = ">=2.0" },
+    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7" },
+    { name = "pytest-asyncio", marker = "extra == 'dev'" },
+    { name = "pytest-cov", marker = "extra == 'dev'" },
+    { name = "pytest-timeout", marker = "extra == 'dev'", specifier = ">=2.1" },
+    { name = "python-dateutil", specifier = ">=2.8" },
+    { name = "requests", specifier = ">=2.28" },
+    { name = "requests", extras = ["socks"], marker = "extra == 'socks'", specifier = ">=2.28" },
+    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4" },
+    { name = "tqdm", specifier = ">=4.64" },
+    { name = "types-python-dateutil", marker = "extra == 'dev'", specifier = ">=2.8" },
+    { name = "types-requests", marker = "extra == 'dev'", specifier = ">=2.28" },
 ]
+provides-extras = ["socks", "dev", "docs"]
 
 [[package]]
 name = "psxdata-mcp"
@@ -1322,7 +1346,7 @@ requires-dist = [
     { name = "anyio", specifier = ">=4" },
     { name = "duckdb", specifier = ">=1.5,<2" },
     { name = "mcp", specifier = ">=2.2,<3" },
-    { name = "psxdata", specifier = ">=1.1,<2" },
+    { name = "psxdata", url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.2.1.zip" },
 ]
 
 [package.metadata.requires-dev]
