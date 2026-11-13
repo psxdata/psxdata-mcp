@@ -1279,8 +1279,8 @@ wheels = [
 
 [[package]]
 name = "psxdata"
-version = "1.4.0"
-source = { url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.4.0.zip" }
+version = "1.5.0"
+source = { url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.5.0.zip" }
 dependencies = [
     { name = "beautifulsoup4" },
     { name = "diskcache" },
@@ -1293,7 +1293,7 @@ dependencies = [
     { name = "requests" },
     { name = "tqdm" },
 ]
-sdist = { hash = "sha256:1239a2b529d00933d26ece8dfd8a8a98b2563b20df778d57e2262c5516e97a8f" }
+sdist = { hash = "sha256:729d489161f97d6019108ba8bfb9063f0a4df3b700dd376cb5adea702cfb7efc" }
 
 [package.metadata]
 requires-dist = [
@@ -1346,7 +1346,7 @@ requires-dist = [
     { name = "anyio", specifier = ">=4" },
     { name = "duckdb", specifier = ">=1.5,<2" },
     { name = "mcp", specifier = ">=2.2,<3" },
-    { name = "psxdata", url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.4.0.zip" },
+    { name = "psxdata", url = "https://github.com/psxdata/psxdata/archive/refs/tags/v1.5.0.zip" },
 ]
 
 [package.metadata.requires-dev]
