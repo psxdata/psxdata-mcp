@@ -20,7 +20,13 @@ INDEX_COLUMNS: tuple[str, ...] = (
     "market_cap_m",
     "freefloat_m",
     "shares_m",
+    "badge",
+    "ex_flag",
 )
+
+# Columns coerced to float64 in load_index — everything numeric, i.e.
+# INDEX_COLUMNS minus index_name/symbol (keys) and badge/ex_flag (text).
+INDEX_NUMERIC_COLUMNS: tuple[str, ...] = INDEX_COLUMNS[2:-2]
 
 # Order of the <h2> headings on /eligible-scrips, matching the SDK's table_0..table_8.
 ELIGIBLE_CATEGORIES: tuple[str, ...] = (
@@ -158,7 +164,7 @@ def load_index(name: str) -> pd.DataFrame:
         return df
     df.insert(0, "index_name", name)
     df = df.reindex(columns=list(INDEX_COLUMNS))
-    for col in INDEX_COLUMNS[2:]:
+    for col in INDEX_NUMERIC_COLUMNS:
         df[col] = pd.to_numeric(df[col], errors="coerce").astype("float64")
     return df
 
