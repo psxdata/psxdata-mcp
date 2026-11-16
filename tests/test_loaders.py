@@ -63,6 +63,14 @@ def test_load_index_fixed_float_columns(fake_psx: dict[str, list[str]]) -> None:
     assert kmi["shares_m"].tolist() == [12.5, 7.25]
 
 
+def test_load_index_keeps_ex_flag(fake_psx: dict[str, list[str]]) -> None:
+    kse = loaders.load_index("KSE100")
+    assert str(kse["ex_flag"].dtype) == "string"
+    assert kse.loc[kse["symbol"] == "OGDC", "ex_flag"].iloc[0] == "XD"
+    assert kse.loc[kse["symbol"] == "OGDC", "badge"].iloc[0] == "XD"
+    assert pd.isna(kse.loc[kse["symbol"] == "PPL", "ex_flag"].iloc[0])
+
+
 def test_load_fundamentals_filters(fake_psx: dict[str, list[str]]) -> None:
     assert loaders.load_fundamentals(["OGDC"])["symbol"].tolist() == ["OGDC"]
     assert len(loaders.load_fundamentals(None)) == 2

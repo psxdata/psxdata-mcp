@@ -55,6 +55,8 @@ def fake_psx(monkeypatch: pytest.MonkeyPatch) -> dict[str, list[str]]:
             "idx_weight": [10.0, 5.0],
             "idx_point": [100.0, 50.0],
             "market_cap_m": [1000.0, 500.0],
+            "badge": pd.array(["XD", pd.NA], dtype="string"),
+            "ex_flag": pd.array(["XD", pd.NA], dtype="string"),
         }
         if name == "KSE100":
             return pd.DataFrame({**base, "freefloat_m": [300.0, 100.0]})
