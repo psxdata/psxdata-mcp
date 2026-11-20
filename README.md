@@ -1,6 +1,9 @@
 # psxdata-mcp
 
+[![CI](https://github.com/psxdata/psxdata-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/psxdata/psxdata-mcp/actions/workflows/ci.yml)
 [![Documentation](https://img.shields.io/badge/docs-mintlify-blue)](https://psxdata.mintlify.app/mcp/introduction)
+[![Docker Hub](https://img.shields.io/docker/v/mtauha/psxdata-mcp?label=Docker+Hub)](https://hub.docker.com/r/mtauha/psxdata-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An [MCP](https://modelcontextprotocol.io) server that gives AI assistants Pakistan Stock
 Exchange data. It runs locally in Docker: the assistant loads PSX data (prices, screener,
