@@ -1,5 +1,7 @@
 # psxdata-mcp
 
+[![Documentation](https://img.shields.io/badge/docs-mintlify-blue)](https://psxdata.mintlify.app/mcp/introduction)
+
 An [MCP](https://modelcontextprotocol.io) server that gives AI assistants Pakistan Stock
 Exchange data. It runs locally in Docker: the assistant loads PSX data (prices, screener,
 index constituents, sectors, filings, debt market, margin-eligible scrips) into a private
