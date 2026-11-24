@@ -1,7 +1,7 @@
 # psxdata-mcp
 
 [![CI](https://github.com/psxdata/psxdata-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/psxdata/psxdata-mcp/actions/workflows/ci.yml)
-[![Documentation](https://img.shields.io/badge/docs-mintlify-blue)](https://psxdata.mintlify.app/mcp/introduction)
+[![Documentation](https://img.shields.io/badge/docs-mintlify-blue)](https://docs.psxdata.org/mcp/introduction)
 [![Docker Hub](https://img.shields.io/docker/v/mtauha/psxdata-mcp?label=Docker+Hub)](https://hub.docker.com/r/mtauha/psxdata-mcp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
