@@ -32,7 +32,8 @@ claude plugin marketplace add psxdata/psxdata-mcp
 claude plugin install psxdata-hosted@psxdata-mcp
 ```
 
-Claude Code asks for the server URL when the plugin is enabled; use the one from your invitation.
+Request an invite at [join.psxdata.org](https://join.psxdata.org). Claude Code asks for the server URL
+when the plugin is enabled; use the one from your invitation email.
 Then run `/mcp` and sign in to `psxdata`. Install one of the two plugins, not both.
 
 **Claude Code** (server only):
